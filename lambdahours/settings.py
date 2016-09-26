@@ -144,4 +144,4 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/' # It means home view
 
-STATIC_ROOT = "/static/"asd
+STATIC_ROOT = "/static/"
