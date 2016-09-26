@@ -1,1 +1,1 @@
-web: gunicorn lambdahours.wsgi --log-file -
+web: gunicorn lambdahours.wsgi
