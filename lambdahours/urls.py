@@ -19,10 +19,12 @@ from django.contrib.auth import views
 from login.forms import LoginForm
 from django.views.generic.base import RedirectView
 import login
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^dashboard/', include('login.urls'), name='dashboard'),
     url(r'^', include('allauth.urls')),
     url(r'^$', login.views.home ),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
